@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>
+    Home Page
+</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'scss/css.css' %}">
+<div class="container">
+    <div class="row custom-section">
+        <div class="col-12 col-lg-4">
+            <h2>Contact Us</h2>
+            <h3>Landing Page</h3>
+            <p>Welcome to abal abal Hospital. In here we deserve the best treatment.</p>
+            <a href="{% url 'aboutus' %}">Read More</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

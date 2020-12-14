@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(../image/bg_register.png);
+  background-size: 30vmax;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-position-y: 10vmax;
+  background-position-x: 60vmax;
+}
+
+.custom-nav .navbar-brand img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 4px;
+}
+
+.custom-nav .navbar-brand span {
+  color: #263C7A;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 0.3em;
+  margin-top: -14px;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item label {
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-top: -7px;
+  margin-left: 0.3em;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
+  color: #263C7A;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 2.2em;
+  -webkit-transition: .3s color ease;
+  transition: .3s color ease;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .nav-link:hover {
+  color: #e24b0d;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-in-button {
+  background-color: #822b07;
+  color: white;
+  border-radius: 2em;
+  border: 0;
+  padding-left: 1.6em;
+  padding-right: 1.6em;
+}
+
+.custom-nav #navbarNav .navbar-nav .nav-item .sign-up-button {
+  background-color: #263C7A;
+  color: white;
+  border-radius: 2em;
+  border: 0;
+  padding-left: 1.6em;
+  padding-right: 1.6em;
+  margin-left: 7px;
+}
+
+.custom-nav #navbarNav .navbar-nav .user {
+  margin-top: 8px;
+  margin-left: 4px;
+  color: #263C7A;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.custom-section {
+  margin-top: 7.5em;
+  text-align: center;
+}
+
+.custom-section h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.custom-section input[type="text"], .custom-section input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #b23b0a;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.custom-section input[type="text"]:focus, .custom-section input[type="password"]:focus {
+  width: 280px;
+  border-color: #6857B0;
+}
+
+.custom-section input[type="text"]:hover, .custom-section input[type="password"]:hover {
+  width: 280px;
+  border-color: #6857B0;
+}
+
+.custom-section input[type="submit"] {
+  text-transform: uppercase;
+  color: white;
+  background-color: #263C7A;
+  border-radius: 2em;
+  border: 0;
+  padding: .5rem 3rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.custom-section input[type="submit"]:hover {
+  background-color: #2c468d;
+  color: #F68B5F;
+}
+/*# sourceMappingURL=regis.css.map */

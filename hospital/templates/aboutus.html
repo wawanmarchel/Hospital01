@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>
+    About Us
+</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'scss/aboutus.css' %}">
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card-1 bg-warning" style="width:18rem">
+            <img src="{% static 'image/ran.jpg' %}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Bhetrand Dwilangga</h5>
+                <p class="card-text">CEO of abal abal Hospital</p>
+                <a href="https://www.instagram.com/_raneffable" class="btn btn-primary">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="width:18rem">
+            <img src="{% static 'image/marchel.jpg' %}" class="card-img-top">
+
+            <div class="card-body">
+                <h5 class="card-title">Marchel Gunawan</h5>
+                <p class="card-text">CEO of abal abal Hospital </p>
+                <a href="https://www.instagram.com/wawanmarchel/" class="btn btn-primary">Instagram</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

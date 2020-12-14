@@ -1,0 +1,79 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+//variables
+$primaryColor: #060632;
+$secondaryColor: #BED2FA;
+$thirdColor: #FC9290;
+// styles
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+//box
+.box {
+    width: 500px;
+    padding: 40px;
+    position: left center;
+    transform: translate(-8rem,-4rem);
+    text-align: center;
+    margin-top: 10em;
+    label{
+        line-height: 0.1;
+    }
+    h1{
+        color: $primaryColor;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    input[type="text"], input[type="password"]{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: darken($secondaryColor,30%);
+        border-radius: 24px;
+        transition: 0.25s;
+        &:focus{
+            width: 280px;
+            border-color: #2ecc71;
+        }
+        &:hover{
+            width: 280px;
+            border-color: #2ecc71;
+        }
+    }
+    input[type="submit"]{
+        background-color: $thirdColor;
+        border-radius: 22px;
+        border: 0;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: .3s background-color ease;
+        color: white;
+        &:hover{
+            background-color: darken($thirdColor,10%);
+        }
+    }
+    p {
+        white-space: nowrap;
+        margin-top: 10px;
+        font-size: 1em;
+        font-weight: 400;
+        color: darken($thirdColor,70%);
+        a{
+            color: $thirdColor;
+            text-decoration: none;
+            &:hover{
+                color: darken($thirdColor,10%);
+            }
+        }
+    }
+}

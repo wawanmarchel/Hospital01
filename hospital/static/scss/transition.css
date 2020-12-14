@@ -1,0 +1,36 @@
+.row {
+  -webkit-animation: transitionIn 0.5s;
+          animation: transitionIn 0.5s;
+}
+
+.background-image {
+  -webkit-animation: transitionIn 0.5s;
+          animation: transitionIn 0.5s;
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=transition.css.map */

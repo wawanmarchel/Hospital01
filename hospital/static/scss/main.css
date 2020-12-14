@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap");
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.box {
+  width: 500px;
+  padding: 40px;
+  position: left center;
+  -webkit-transform: translate(-8rem, -4rem);
+          transform: translate(-8rem, -4rem);
+  text-align: center;
+  margin-top: 10em;
+}
+
+.box label {
+  line-height: 0.1;
+}
+
+.box h1 {
+  color: #060632;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box input[type="text"], .box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #3070ef;
+  border-radius: 24px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus {
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.box input[type="text"]:hover, .box input[type="password"]:hover {
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.box input[type="submit"] {
+  background-color: #FC9290;
+  border-radius: 22px;
+  border: 0;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-transition: .3s background-color ease;
+  transition: .3s background-color ease;
+  color: white;
+}
+
+.box input[type="submit"]:hover {
+  background-color: #fb615e;
+}
+
+.box p {
+  white-space: nowrap;
+  margin-top: 10px;
+  font-size: 1em;
+  font-weight: 400;
+  color: #260201;
+}
+
+.box p a {
+  color: #FC9290;
+  text-decoration: none;
+}
+
+.box p a:hover {
+  color: #fb615e;
+}
+/*# sourceMappingURL=main.css.map */

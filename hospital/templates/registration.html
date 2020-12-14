@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>
+    Registration
+</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'scss/regis.css' %}">
+<div class="container">
+    <div class="row custom-section">
+        <div class="col-12 col-lg-4">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <h1>Sign Up</h1>
+                <input type="text" placeholder="Username" name="username" />
+                <input type="text" placeholder="Email" name="email" />
+                <input type="password" name="password" placeholder="password" />
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

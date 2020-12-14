@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>
+    Home Page
+</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'scss/doctor.css' %}">
+<nav class="navbar navbar-light bg-transparent col-12 justify-content-end">
+    <form class="form-inline" method="POST" action="">
+        {% csrf_token %}
+        <input class="form-control mr-sm-2" type="search" name="name" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+<br>
+<div class="col-6">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Status</th>
+                <th scope="col">Nurse Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for doctor in doctors %}
+            {% if doctor.date_of_death == NULL %}
+            <tr>
+                <td>{{ doctor.first_name }}</td>
+                <td>{{ doctor.last_name }}</td>
+                <td>{{ doctor.gender }}</td>
+                <td> - </td>
+                <td>{{ doctor.nurse.first_name }} {{doctor.nurse.last_name}}</td>
+            </tr>
+            {% else %}
+            <tr class="table-danger">
+                <td>{{ doctor.first_name }}</td>
+                <td>{{ doctor.last_name }}</td>
+                <td>{{ doctor.gender }}</td>
+                <td> DIED </td>
+                <td>{{ doctor.nurse.first_name }} {{doctor.nurse.last_name}}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

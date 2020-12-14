@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>
+    Home Page
+</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'scss/medicine.css' %}">
+<div class="col-9">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Medicine Name</th>
+                <th scope="col">Medicine Type</th>
+                <th scope="col">Medicine Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medicine in medicines %}
+            {% if medicine.medicine_type.id == 1 %}
+            <tr class="table-success">
+                <td>{{ medicine.name }}</td>
+                <td>{{ medicine.medicine_type }}</td>
+                <td>Rp{{ medicine.price }}</td>
+            </tr>
+            {% elif medicine.medicine_type.id == 2 %}
+            <tr class="table-danger">
+                <td>{{ medicine.name }}</td>
+                <td>{{ medicine.medicine_type }}</td>
+                <td>Rp{{ medicine.price }}</td>
+            </tr>
+            {% elif medicine.medicine_type.id == 3 %}
+            <tr class="table-warning">
+                <td>{{ medicine.name }}</td>
+                <td>{{ medicine.medicine_type }}</td>
+                <td>Rp{{ medicine.price }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
