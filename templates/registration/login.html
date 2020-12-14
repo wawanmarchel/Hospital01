@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>
+    Login Page
+</title>
+{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'scss/css.css' %}">
+<link rel="stylesheet" href="{% static 'scss/main.css' %}">
+<form class="box" method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <h1>Sign In</h1>
+    <input type="text" placeholder="Username" {{ form.username }} <input type="password" placeholder="Password"
+        {{ form.password }} <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next }}" />
+    <p>Not a Member? <a href="{% url 'register' %}">SIGN UP NOW</a></p>
+    {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+</form>
+{% endblock %}
